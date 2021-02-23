@@ -75,6 +75,7 @@ class _ChatScreenState extends State<ChatScreen> {
                   ),
                   FlatButton(
                     onPressed: () {
+                      //Store message in database 
                       _fireStore.collection('messages').add({
                         'text': messageText,
                         'sender': loggedInUser.email,
